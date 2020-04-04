@@ -1,7 +1,7 @@
 # Личный проект «Киноман» [![Build status][travis-image]][travis-url]
 
 * Студент: [Максим Долгих](https://up.htmlacademy.ru/ecmascript/11/user/411785).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Матковский](https://up.htmlacademy.ru/ecmascript/11/user/1151767).
 
 ---
 
