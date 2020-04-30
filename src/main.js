@@ -71,7 +71,7 @@ const footerContainer = document.querySelector(`.footer__statistics`);
 
 render(footerContainer, createCountFilm(films.length));
 
-// render(document.body, createFilmDetails(films[0]));
+render(document.body, createFilmDetails(films[0]));
 
 const loadMoreFilmBtn = filmListContainer.querySelector(`.films-list__show-more`);
 
