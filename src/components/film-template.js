@@ -1,4 +1,4 @@
-const createFilmTemplate = (film = {}) => {
+const createFilmTemplate = (film) => {
   const {title, image, description, rating, date, duration, genres, comments} = film;
   const countComments = comments.length;
   const shortDescription = description.length > 140 ?

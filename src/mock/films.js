@@ -38,9 +38,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: true,
-      watched: false,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -80,9 +82,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: true,
-      watched: false,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -122,9 +126,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: false,
-      watched: true,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -164,9 +170,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: false,
-      watched: false,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -206,9 +214,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: false,
-      watched: false,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -248,9 +258,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: false,
-      watched: false,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: true,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -290,9 +302,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: false,
-      watched: false,
-      favorites: true,
+      userInfo: {
+        watchlist: false,
+        watched: false,
+        favorites: true,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -332,9 +346,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: false,
-      watched: false,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -374,9 +390,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: false,
-      watched: false,
-      favorites: false,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -416,9 +434,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: true,
-      watched: false,
-      favorites: true,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: false,
+      }
     },
     {
       title: `The Dance of Life`,
@@ -458,9 +478,11 @@ const getFilms = () => {
           date: `2019/12/31 23:59`,
         },
       ],
-      watchlist: true,
-      watched: false,
-      favorites: true,
+      userInfo: {
+        watchlist: true,
+        watched: false,
+        favorites: true,
+      }
     },
   ];
 };

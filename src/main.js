@@ -26,20 +26,14 @@ const header = document.querySelector(`.header`);
 const main = document.querySelector(`.main`);
 const user = getUser();
 const films = getFilms();
-const watchlistFilms = [];
-const watchedFilms = [];
-const favoritesFilms = [];
-
-films.map((film) => {
-  if (film.watchlist) {
-    watchlistFilms.push(film);
-  }
-  if (film.watched) {
-    watchedFilms.push(film);
-  }
-  if (film.favorites) {
-    favoritesFilms.push(film);
-  }
+const watchlistFilms = films.filter((film) => {
+  return film.userInfo.watchlist;
+});
+const watchedFilms = films.filter((film) => {
+  return film.userInfo.watched;
+});
+const favoritesFilms = films.filter((film) => {
+  return film.userInfo.favorites;
 });
 
 render(header, createHeaderProfile(user));
@@ -71,7 +65,7 @@ const footerContainer = document.querySelector(`.footer__statistics`);
 
 render(footerContainer, createCountFilm(films.length));
 
-render(document.body, createFilmDetails(films[0]));
+// render(document.body, createFilmDetails(films[0]));
 
 const loadMoreFilmBtn = filmListContainer.querySelector(`.films-list__show-more`);
 
