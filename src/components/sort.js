@@ -1,13 +1,33 @@
+import {createElement} from "../utils.js";
+
 const createSort = () => {
   return (
-    `
-      <ul class="sort">
+    `<ul class="sort">
         <li><a href="#" class="sort__button sort__button--active">Sort by default</a></li>
         <li><a href="#" class="sort__button">Sort by date</a></li>
         <li><a href="#" class="sort__button">Sort by rating</a></li>
-      </ul>
-    `
+      </ul>`
   );
 };
 
-export {createSort};
+export default class Menu {
+  constructor() {
+    this._element = null;
+  }
+
+  getTemplate() {
+    return createSort(this._film);
+  }
+
+  getElement() {
+    if (!this._element) {
+      this._element = createElement(this.getTemplate());
+    }
+
+    return this._element;
+  }
+
+  removeElement() {
+    this._element = null;
+  }
+}

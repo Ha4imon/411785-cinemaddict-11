@@ -1,3 +1,5 @@
+import {createElement} from "../utils.js";
+
 const createFilmTemplate = (film) => {
   const {title, image, description, rating, date, duration, genres, comments} = film;
   const countComments = comments.length;
@@ -5,10 +7,8 @@ const createFilmTemplate = (film) => {
     `${description.substring(0, 139)}...` :
     description;
 
-
   return (
-    `
-      <article class="film-card">
+    `<article class="film-card">
         <h3 class="film-card__title">${title}</h3>
         <p class="film-card__rating">${rating}</p>
         <p class="film-card__info">
@@ -24,9 +24,29 @@ const createFilmTemplate = (film) => {
           <button class="film-card__controls-item button film-card__controls-item--mark-as-watched">Mark as watched</button>
           <button class="film-card__controls-item button film-card__controls-item--favorite">Mark as favorite</button>
         </form>
-      </article>
-    `
+      </article>`
   );
 };
 
-export {createFilmTemplate};
+export default class Film {
+  constructor(film) {
+    this._film = film;
+    this._element = null;
+  }
+
+  getTemplate() {
+    return createFilmTemplate(this._film);
+  }
+
+  getElement() {
+    if (!this._element) {
+      this._element = createElement(this.getTemplate());
+    }
+
+    return this._element;
+  }
+
+  removeElement() {
+    this._element = null;
+  }
+}

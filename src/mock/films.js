@@ -1,7 +1,7 @@
 const getFilms = () => {
   return [
     {
-      title: `The Dance of Life`,
+      title: `The Dance`,
       originalTitle: `Original: The Great Flamarion`,
       image: `./images/posters/sagebrush-trail.jpg`,
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
@@ -20,7 +20,7 @@ const getFilms = () => {
       country: `USA`,
       comments: [
         {
-          author: `Tim Macoveev`,
+          author: `Tim Macoveev Test`,
           text: `Interesting setting and a good cast`,
           emoji: `./images/emoji/smile.png`,
           date: `2019/12/31 23:59`,
@@ -45,7 +45,7 @@ const getFilms = () => {
       }
     },
     {
-      title: `The Dance of Life`,
+      title: `The Dance of`,
       originalTitle: `Original: The Great Flamarion`,
       image: `./images/posters/sagebrush-trail.jpg`,
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
@@ -56,7 +56,7 @@ const getFilms = () => {
         year: `1997`,
       },
       duration: `1h 36m`,
-      genres: [`drama`],
+      genres: [`drama`, `horror`],
       age: `18+`,
       director: `Anthony Mann`,
       writers: [`Anne Wigton`, `Heinz Herald`, `Richard Weil`],
