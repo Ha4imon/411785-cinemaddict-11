@@ -1,7 +1,27 @@
-import {createCommentTemplate} from './comment';
+import {createElement} from "../utils.js";
 
 const createGenre = (genre) => {
   return `<span class="film-details__genre">${genre}</span>`;
+};
+
+const createCommentTemplate = (comment) => {
+  const {emoji, text, author, date} = comment;
+
+  return (
+    `<li class="film-details__comment">
+        <span class="film-details__comment-emoji">
+          <img src="${emoji}" width="55" height="55" alt="emoji-smile">
+        </span>
+        <div>
+          <p class="film-details__comment-text">${text}</p>
+          <p class="film-details__comment-info">
+            <span class="film-details__comment-author">${author}</span>
+            <span class="film-details__comment-day">${date}</span>
+            <button class="film-details__comment-delete">Delete</button>
+          </p>
+        </div>
+      </li>`
+  );
 };
 
 const createFilmDetails = (film) => {
@@ -14,11 +34,10 @@ const createFilmDetails = (film) => {
 
   const commentTemplate = comments.map((item) => {
     return createCommentTemplate(item);
-  }).join(`\n`);
+  });
 
   return (
-    `
-      <section class="film-details">
+    `<section class="film-details">
         <form class="film-details__inner" action="" method="get">
           <div class="form-details__top-container">
             <div class="film-details__close">
@@ -96,7 +115,7 @@ const createFilmDetails = (film) => {
       
           <div class="form-details__bottom-container">
             <section class="film-details__comments-wrap">
-              <h3 class="film-details__comments-title">Comments <span class="film-details__comments-count">4</span></h3>
+              <h3 class="film-details__comments-title">Comments <span class="film-details__comments-count">${comments.length}</span></h3>
       
               <ul class="film-details__comments-list">
                 ${commentTemplate}
@@ -134,9 +153,29 @@ const createFilmDetails = (film) => {
             </section>
           </div>
         </form>
-      </section>
-    `
+      </section>`
   );
 };
 
-export {createFilmDetails};
+export default class FilmDetails {
+  constructor(film) {
+    this._film = film;
+    this._element = null;
+  }
+
+  getTemplate() {
+    return createFilmDetails(this._film);
+  }
+
+  getElement() {
+    if (!this._element) {
+      this._element = createElement(this.getTemplate());
+    }
+
+    return this._element;
+  }
+
+  removeElement() {
+    this._element = null;
+  }
+}
